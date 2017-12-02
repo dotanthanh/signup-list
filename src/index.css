@@ -1,5 +1,107 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+button {
+  height: 40px;
+  padding-left: 24px;
+  padding-right: 24px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+div.wrap-container {
+  display: flex;
+  justify-content: center;
+  top: 0;
+}
+
+div.main-container {
+  width: 976px;
+  background-color: rgba(235,235,235,0.9);
+}
+
+div.header {
+  background-color: rgba(170,170,170,0.9);
+  box-sizing: border-box;
+  height: 96px;
+  padding: 32px;
+}
+
+div.header div.logo {
+  background-color: white;
+  height: 100%;
+}
+
+div.list-content {
+  padding: 32px;
+}
+
+div.list-content div.new-entry-form, div.table-list {
+  background-color: white;
+  border: solid 0px white;
+}
+
+div.list-content h3 {
+  font-weight: 400;
+  color: rgba(100,100,100,0.9);
+  margin: 32px 0;
+}
+
+div.list-content div.new-entry-form {
+  padding: 16px;
+  font-size: 14px;
+  margin: 8px 0;
+}
+
+form label {
+  display: none;
+}
+
+form  input {
+  padding-left: 16px;
+  height: 40px;
+  margin: 0 16px 0 0;
+  border: solid 1px grey;
+  box-sizing: border-box;
+}
+
+form button {
+  height: 40px;
+  border: solid 0 white;
+  background-color: blue;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  float: right;
+}
+
+table {
+  width: 100%;
+  height: auto;
+}
+
+table tr > td{
+  border-top: solid 1px rgb(200,200,200);
+}
+
+table th {
+  height: 48px;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+  color: #757575;
+  padding: 16px 24px;
+  font-weight: bold;
+  text-align: left;
+}
+
+table td {
+  padding: 24px;
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #505050;
+  height: 24px;
+}
+
+table td button {
+  float: right;
+  margin-left: 24px;
 }
