@@ -4,6 +4,7 @@ import NewEntryForm from '../NewEntryForm/NewEntryForm';
 import Row from '../Row/Row';
 import './ListContent.css';
 import { sortByName, sortByEmail, sortByPhone } from '../../utils/utils';
+import Table from '../Table/Table';
 
 class ListContent extends Component {
 
@@ -113,24 +114,7 @@ class ListContent extends Component {
         <NewEntryForm handleChange={this.handleChange}
                       handleSubmit={this.handleSubmit} />
 
-        <div className='table-list'>
-
-          <table>
-            <thead>
-              <tr>
-                <th id='name-header' onClick={this.sort} className='name'> Name </th>
-                <th id='email-header' onClick={this.sort} className='email'> E-mail address </th>
-                <th id='phone-header' onClick={this.sort}
-                    colSpan='2'> Phone number </th>
-              </tr>
-            </thead>
-            <tbody>
-              { rows }
-            </tbody>
-
-          </table>
-
-        </div>
+        <Table rows={rows} sort={this.sort} />
 
       </div>
     )

@@ -1,3 +1,14 @@
+/* basic margin to seperate new entry form and the main table */
+
 div.list-content div.new-entry-form {
   margin: 8px 0;
+}
+
+/* stylings to keep header fields between forms and table columns vertically aligned */
+
+input.name {
+  width: 160px;
+}
+input.email {
+  width: 256px;
 }

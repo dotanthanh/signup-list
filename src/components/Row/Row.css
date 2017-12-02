@@ -1,3 +1,28 @@
+/* general stylings for table rows and columns go here */
+
+table tbody tr {
+  box-sizing: border-box;
+  border-top: solid 1px rgba(225,225,225,0.9);
+  height: 72px;
+}
+
+tbody td {
+  box-sizing: border-box;
+  height: 72px;
+  color: #505050;
+  font-weight: 400;
+  font-size: 16px;
+  padding-left: 24px;
+}
+
+tbody td button {
+  float: right;
+  margin-right: 24px;
+  background: transparent;
+}
+
+/* styling for rows in edit mode goes here */
+
 td.editable {
   padding: 0;
 }
