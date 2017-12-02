@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import './Row.css';
 
 class Row extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      inEdit: 'false',
+      inEdit: false,
       name: this.props.row.name,
       email: this.props.row.email,
       phone: this.props.row.phone
@@ -48,9 +49,9 @@ class Row extends Component {
 
   render() {
 
-    if (this.state.inEdit) {
+    if (!this.state.inEdit) {
       return (
-        <tr >
+        <tr>
           <td> { this.props.row.name } </td>
           <td> { this.props.row.email } </td>
           <td> { this.props.row.phone } </td>
@@ -58,10 +59,10 @@ class Row extends Component {
             <button type='button' onClick={ ()=>{
               this.props.delete(this.props.id);
             } }>
-              <span>Delete</span>
+              <span className='glyphicon glyphicon-trash'></span>
             </button>
             <button type='button' onClick={this.toggleMode}>
-              <span>Edit</span>
+              <span className='glyphicon glyphicon-pencil'></span>
             </button>
           </td>
         </tr>
@@ -70,24 +71,24 @@ class Row extends Component {
     else {
       return (
         <tr>
-          <td colSpan='4'>
+          <td className='editable' colSpan='4'>
           <form>
             <label htmlFor='full-name'></label>
-            <input id='name' type='text'
+            <input id='name' type='text' className='name'
                    value={this.state.name}
                    onChange={this.onChanges} />
 
             <label htmlFor='email'></label>
-            <input id='email' type='text'
+            <input id='email' type='text' className='email'
                    value={this.state.email}
                    onChange={this.onChanges} />
 
             <label htmlFor='phone'></label>
-            <input id='phone' type='text'
+            <input id='phone' type='text' className='phone'
                    value={this.state.phone}
                    onChange={this.onChanges} />
 
-            <button type='button' onClick={ ()=>{
+            <button id='save' type='button' onClick={ ()=>{
                 this.props.save({
                   name: this.state.name,
                   email: this.state.email,
@@ -96,7 +97,7 @@ class Row extends Component {
                 this.toggleMode();
             } } > Save </button>
 
-            <button type='button' onClick={this.toggleMode}> Cancel </button>
+            <button id='cancel' type='button' onClick={this.toggleMode}> Cancel </button>
 
           </form>
           </td>

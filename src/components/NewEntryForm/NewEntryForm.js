@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './NewEntryForm.css';
 
 class NewEntryForm extends Component {
 
@@ -8,17 +9,17 @@ class NewEntryForm extends Component {
       <div className='new-entry-form'>
         <form onSubmit={ this.props.handleSubmit } action=''>
           <label htmlFor='name'></label>
-          <input id='name' type='text'
+          <input id='name' type='text' className='name'
                  placeholder='Full name'
                  onChange={this.props.handleChange} />
 
           <label htmlFor='email'></label>
-          <input id='email' type='text'
+          <input id='email' type='text' className='email'
                  placeholder='E-mail address'
                  onChange={this.props.handleChange} />
 
           <label htmlFor='phone'></label>
-          <input id='phone' type='text'
+          <input id='phone' type='text' className='phone'
                  placeholder='Phone number'
                  onChange={this.props.handleChange} />
 

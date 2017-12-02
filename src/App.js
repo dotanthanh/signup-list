@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Header from './components/Header';
-import ListContent from './components/ListContent';
+import ListContent from './components/ListContent/ListContent';
 
 class App extends Component {
   render() {
@@ -11,7 +10,10 @@ class App extends Component {
 
         <div className='main-container'>
 
-          <Header />
+          <div className='header' >
+
+          </div>
+
           <ListContent />
 
         </div>

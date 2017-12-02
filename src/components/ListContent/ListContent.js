@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { randomData } from '../static/random-data';
-import NewEntryForm from './NewEntryForm';
-import Row from './Row';
-import { sortByName, sortByEmail, sortByPhone } from '../utils/utils';
+import { randomData } from '../../static/random-data';
+import NewEntryForm from '../NewEntryForm/NewEntryForm';
+import Row from '../Row/Row';
+import './ListContent.css';
+import { sortByName, sortByEmail, sortByPhone } from '../../utils/utils';
 
 class ListContent extends Component {
 
@@ -117,8 +118,8 @@ class ListContent extends Component {
           <table>
             <thead>
               <tr>
-                <th id='name-header' onClick={this.sort}> Name </th>
-                <th id='email-header' onClick={this.sort}> E-mail address </th>
+                <th id='name-header' onClick={this.sort} className='name'> Name </th>
+                <th id='email-header' onClick={this.sort} className='email'> E-mail address </th>
                 <th id='phone-header' onClick={this.sort}
                     colSpan='2'> Phone number </th>
               </tr>
