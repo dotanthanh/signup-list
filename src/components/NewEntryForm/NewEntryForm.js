@@ -26,7 +26,7 @@ class NewEntryForm extends Component {
                  placeholder='Phone number' required maxLength='15'
                  onChange={this.props.handleChange} />
 
-          <button type='submit' onClick={this.props.handleSubmit} > Add new </button>
+          <button type='submit'> Add new </button>
         </form>
       </div>
     )

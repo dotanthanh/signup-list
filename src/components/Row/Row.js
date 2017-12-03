@@ -130,7 +130,7 @@ class Row extends Component {
       return (
         <tr>
           <td className='editable' colSpan='4'>
-          <form>
+          <form onSubmit={this.save} >
             <label htmlFor='full-name'></label>
             <input id='name' type='text' className='name'
                    value={this.state.name}
@@ -146,7 +146,7 @@ class Row extends Component {
                    value={this.state.phone} maxLength='15'
                    onChange={this.onChanges} required />
 
-            <button id='save' type='button' onClick={this.save} > Save </button>
+            <button id='save' type='submit'> Save </button>
 
             <button id='cancel' type='button' onClick={this.toggleMode}> Cancel </button>
 

@@ -48,6 +48,7 @@ class ListContent extends Component {
       this.setState({
         data: [ newRow, ...this.state.data]
       });
+      event.target.reset();
     }
 
     // error display when validation is not met
