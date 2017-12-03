@@ -65,7 +65,7 @@ class ListContent extends Component {
     data[key] = row;
     this.setState({
       data: data
-    })
+    });
   }
 
   // function for updating state value of input field

@@ -42,6 +42,7 @@ class Row extends Component {
   // function for switching between edit/display mode
   // re-assign value of entry in root array to our local state
   toggleMode() {
+    console.log('toggled');
     this.setState({
       inEdit: !this.state.inEdit,
       name: this.props.row.name,
@@ -83,7 +84,8 @@ class Row extends Component {
   // function for saving changes made to current entry
   // to the root array (in ListContent)
 
-  save() {
+  save(event) {
+    event.preventDefault();
     const newRow = {
       name: this.state.name,
       email: this.state.email.replace(/ /g,''),
@@ -95,7 +97,6 @@ class Row extends Component {
     // component ListContent, otherwise we roll back the local state (with no changes applied)
     if ( isValidated(newRow) ) {
       this.props.save(newRow, this.props.id);
-      this.toggleMode();
     }
     else {
       alert(' Name should contain only letters.\n Email should contains a domain name follow after "@".\n Phone should contains only less than 16 digits.\n All fields are required.');
@@ -130,7 +131,7 @@ class Row extends Component {
       return (
         <tr>
           <td className='editable' colSpan='4'>
-          <form onSubmit={this.save} >
+          <form onSubmit={this.save} action='' >
             <label htmlFor='full-name'></label>
             <input id='name' type='text' className='name'
                    value={this.state.name}
