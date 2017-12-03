@@ -60,7 +60,7 @@ export function isValidated(data) {
   if ( !data.email.includes('@') ) {
     return false;
   }
-  if ( !/^[a-zA-Z]+$/.test( data.name.replace(' ','') ) ) {
+  if ( !/^[a-zA-Z]+$/.test( data.name.replace(/ /g,'') ) ) {
     return false;
   }
   if ( !/^[0-9]+$/.test(data.phone) ){
