@@ -5,22 +5,25 @@ class NewEntryForm extends Component {
 
   render() {
 
+    // render the template with properties/functions received from
+    // parent component ListContent
+
     return (
       <div className='new-entry-form'>
         <form onSubmit={ this.props.handleSubmit } action=''>
           <label htmlFor='name'></label>
           <input id='name' type='text' className='name'
-                 placeholder='Full name'
+                 placeholder='Full name' required
                  onChange={this.props.handleChange} />
 
           <label htmlFor='email'></label>
-          <input id='email' type='text' className='email'
-                 placeholder='E-mail address'
+          <input id='email' type='email' className='email'
+                 placeholder='E-mail address' required
                  onChange={this.props.handleChange} />
 
           <label htmlFor='phone'></label>
-          <input id='phone' type='text' className='phone'
-                 placeholder='Phone number'
+          <input id='phone' type='tel' className='phone'
+                 placeholder='Phone number' required maxLength='15'
                  onChange={this.props.handleChange} />
 
           <button type='submit' onClick={this.props.handleSubmit} > Add new </button>

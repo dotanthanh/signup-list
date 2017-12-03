@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './Table.css';
+import Row from '../Row/Row';
 
 class Table extends Component {
 
@@ -19,7 +20,12 @@ class Table extends Component {
             </tr>
           </thead>
           <tbody>
-            { this.props.rows }
+            {
+              this.props.rows.map( (row, i)=>
+                  <Row save={this.props.save} delete={this.props.delete}
+                       row={row} key={i} id={i} />
+              )
+            }
           </tbody>
 
         </table>
