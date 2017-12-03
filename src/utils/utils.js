@@ -63,8 +63,8 @@ export function isValidated(data) {
   if ( !/^[a-zA-Z]+$/.test( data.name.replace(' ','') ) ) {
     return false;
   }
-  // if ( !/^[0-9]+$/.test(data.phone) ){
-  //   return false;
-  // }
+  if ( !/^[0-9]+$/.test(data.phone) ){
+    return false;
+  }
   return true;
 }
