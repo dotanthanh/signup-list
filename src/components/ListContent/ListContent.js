@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { randomData } from '../../static/random-data';
 import NewEntryForm from '../NewEntryForm/NewEntryForm';
 import './ListContent.css';
-import { sortByName, sortByEmail, sortByPhone, isValidated } from '../../utils/utils';
+import { sortByCategory, isValidated } from '../../utils/utils';
 import Table from '../Table/Table';
 
 class ListContent extends Component {
@@ -126,13 +126,13 @@ class ListContent extends Component {
     // the standard of sorting
     switch (event.target.id) {
       case 'email-header':
-        this.setState( this.state.data.sort(sortByEmail) ) ;
+        this.setState( this.state.data.sort( sortByCategory('email') ) ) ;
         break;
       case 'phone-header':
-        this.setState( this.state.data.sort(sortByPhone) ) ;
+        this.setState( this.state.data.sort( sortByCategory('phone') ) ) ;
         break;
       default:
-        this.setState( this.state.data.sort(sortByName) ) ;
+        this.setState( this.state.data.sort( sortByCategory('name') ) ) ;
         break;
     }
   }
