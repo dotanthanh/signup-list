@@ -14,9 +14,11 @@ https://nodejs.org/en/download/
 2. Run `npm install` to install all required dependencies
 3.) Run `npm run build` to start the development build scripts
 4. Run `npm run test` to run test cases and see the results
-5. Run `npm run start` to start the application. Hot reload supported. The application id now live at : http://localhost:3000
+5. Run `npm run start` to start the application. Hot reload supported.
+6. The application is now live at : http://localhost:3000
 
-## How to use the application
+
+## Usage
 * The application initially has 20 entries in the table with random values
 * Adding new entry by using the upper form (fill in required Name, Email-address, Phone-number inputs)
 * Delete a row by clicking on the trash can symbol on the right side of the target row
