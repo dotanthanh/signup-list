@@ -22,7 +22,7 @@ https://nodejs.org/en/download/
 * Delete a row by clicking on the trash can symbol on the right side of the target row
 * Edit a row by clicking on the pencil symbol on the right side of the target row
 * A form is display while in edit mode, edit the form and choose `Save` to save the changes, `Cancel` to not commit the changes
-* **Forms validation**
+* Forms validation
   * All forms have validation supported.
   * Name input should contain only letter (haven't support exotic letter like Kanji yet)
   * Email should be valid
@@ -36,7 +36,7 @@ https://nodejs.org/en/download/
 
 ## Folder structure
 * `src` folder contains main logic
-* **Inside src**
+* Inside src
   * `components` folder: contains React components. Each component stays in a seperate folder with a JS file and a CSS file.
   * `utils` folder: contains a JS file storing utility functions for sorting and validation functionality
-  * `static` folder: contains static properties like initial layout and initial generated data 
+  * `static` folder: contains static properties like initial layout and initial generated data
