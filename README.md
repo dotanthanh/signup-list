@@ -12,7 +12,7 @@ https://nodejs.org/en/download/
 ### Run
 1. Navigate into the folder (in command line/terminal)
 2. Run `npm install` to install all required dependencies
-3.) Run `npm run build` to start the development build scripts
+3. Run `npm run build` to start the development build scripts
 4. Run `npm run test` to run test cases and see the results
 5. Run `npm run start` to start the application. Hot reload supported.
 6. The application is now live at : http://localhost:3000
