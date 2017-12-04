@@ -18,7 +18,7 @@ https://nodejs.org/en/download/
 6. The application is now live at : http://localhost:3000
 
 
-## Usage
+## Usage/User guide
 * The application initially has 20 entries in the table with random values
 * Adding new entry by using the upper form (fill in required Name, Email-address, Phone-number inputs)
 * Delete a row by clicking on the trash can symbol on the right side of the target row
@@ -33,7 +33,7 @@ https://nodejs.org/en/download/
 
 ## Techs used
 
-* Plain React (with no Redux or equivalent state management)
+* HTML/CSS and plain [React](https://reactjs.org/) (with no Redux or equivalent state management)
 * Scaffold the project using [Create React App](https://github.com/facebookincubator/create-react-app)
 
 ## Folder structure
