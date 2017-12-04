@@ -32,7 +32,7 @@ export const randomData = [
     email: 'rush.more@mail.com',
     phone: '0909301393'
   }, {
-    name: 'さとし　こ',
+    name: 'Satoshi Kon',
     email: 'satoshi.kon@mail.com',
     phone: '0913711819'
   }, {
@@ -44,7 +44,7 @@ export const randomData = [
     email: 'xiao.ming@weibo.com',
     phone: '0981110919'
   }, {
-    name: '中村',
+    name: 'Nakamura',
     email: 'nakamura@mail.com',
     phone: '0981341483'
   }, {
