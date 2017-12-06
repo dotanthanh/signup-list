@@ -1,29 +1,27 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Table.css';
 import Row from '../Row/Row';
 
-class Table extends Component {
+// use functional stateless component
 
-  render() {
-
-    return (
+const Table = ( { sort, save, rows, deleteRow } ) => (
 
       <div className='table-list'>
 
         <table>
           <thead>
             <tr>
-              <th id='name-header' onClick={this.props.sort} className='name'> Name </th>
-              <th id='email-header' onClick={this.props.sort} className='email'> E-mail address </th>
-              <th id='phone-header' onClick={this.props.sort}
+              <th id='name-header' onClick={ sort } className='name'> Name </th>
+              <th id='email-header' onClick={ sort } className='email'> E-mail address </th>
+              <th id='phone-header' onClick={ sort }
                   colSpan='2'> Phone number </th>
             </tr>
           </thead>
           <tbody>
             {
-              this.props.rows.map( (row, i)=>
-                  <Row save={this.props.save} delete={this.props.delete}
-                       row={row} key={i} id={i} />
+              rows.map( (row, i)=>
+                  <Row save={ save } deleteRow={ deleteRow }
+                       row={ row } key={ i } id={ i } />
               )
             }
           </tbody>
@@ -32,10 +30,7 @@ class Table extends Component {
 
       </div>
 
-    )
+)
 
-  }
-
-}
 
 export default Table;

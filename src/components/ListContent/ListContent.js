@@ -145,12 +145,12 @@ class ListContent extends Component {
 
         <h3> List of participants </h3>
 
-        <NewEntryForm handleChange={this.handleChange}
-                      handleSubmit={this.handleSubmit} />
+        <NewEntryForm handleChange={ this.handleChange }
+                      handleSubmit={ this.handleSubmit } />
 
-        <Table rows={this.state.data} sort={this.sort}
-               delete={this.deleteRow}
-               save={this.saveChanges} />
+        <Table rows={ this.state.data } sort={ this.sort }
+               deleteRow={ this.deleteRow }
+               save={ this.saveChanges } />
 
       </div>
     )

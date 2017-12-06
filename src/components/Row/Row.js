@@ -7,6 +7,8 @@ class Row extends Component {
   constructor(props) {
     super(props);
 
+    const { row } = this.props;
+
     // local state of the component
     // inEdit (boolean) to identify which mode the component is currently in
     // so component can render the suitable template
@@ -17,9 +19,9 @@ class Row extends Component {
     // otherwise we dismiss it.
     this.state = {
       inEdit: false,
-      name: this.props.row.name,
-      email: this.props.row.email,
-      phone: this.props.row.phone
+      name: row.name,
+      email: row.email,
+      phone: row.phone
     };
 
     // binding the correct context for function
@@ -105,22 +107,27 @@ class Row extends Component {
 
   render() {
 
+    // get the needed props
+
+    const { row, id, deleteRow } = this.props;
+
     // indentify which mode we are in
     // if we are in edit mode, we display form template
     // otherwise we display normal table row
+
     if (!this.state.inEdit) {
       return (
         <tr>
-          <td> { this.props.row.name } </td>
-          <td> { this.props.row.email } </td>
-          <td> { this.props.row.phone } </td>
+          <td> { row.name } </td>
+          <td> { row.email } </td>
+          <td> { row.phone } </td>
           <td>
             <button type='button' onClick={ ()=>{
-              this.props.delete(this.props.id);
+              deleteRow(id);
             } }>
               <span className='glyphicon glyphicon-trash'></span>
             </button>
-            <button type='button' onClick={this.toggleMode}>
+            <button type='button' onClick={ this.toggleMode }>
               <span className='glyphicon glyphicon-pencil'></span>
             </button>
           </td>
@@ -131,27 +138,28 @@ class Row extends Component {
       return (
         <tr>
           <td className='editable' colSpan='4'>
-          <form onSubmit={this.save} action='' >
-            <label htmlFor='full-name'></label>
-            <input id='name' type='text' className='name'
-                   value={this.state.name}
-                   onChange={this.onChanges} required />
+            <form onSubmit={ this.save } action='' >
 
-            <label htmlFor='email'></label>
-            <input id='email' type='email' className='email'
-                   value={this.state.email}
-                   onChange={this.onChanges} required />
+              <label htmlFor='full-name'></label>
+              <input id='name' type='text' className='name'
+                     value={ this.state.name }
+                     onChange={ this.onChanges } required />
 
-            <label htmlFor='phone'></label>
-            <input id='phone' type='tel' className='phone'
-                   value={this.state.phone} maxLength='15'
-                   onChange={this.onChanges} required />
+              <label htmlFor='email'></label>
+              <input id='email' type='email' className='email'
+                     value={ this.state.email }
+                     onChange={ this.onChanges } required />
 
-            <button id='save' type='submit'> Save </button>
+              <label htmlFor='phone'></label>
+              <input id='phone' type='tel' className='phone'
+                     value={ this.state.phone } maxLength='15'
+                     onChange={ this.onChanges } required />
 
-            <button id='cancel' type='button' onClick={this.toggleMode}> Cancel </button>
+              <button id='save' type='submit'> Save </button>
 
-          </form>
+              <button id='cancel' type='button' onClick={ this.toggleMode }> Cancel </button>
+
+            </form>
           </td>
         </tr>
       )
@@ -160,5 +168,6 @@ class Row extends Component {
   }
 
 }
+
 
 export default Row;
